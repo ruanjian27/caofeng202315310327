@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button style="background-color: antiquewhite;">
+    点击
+</button>
+<script>
+    // 一、分析事件三要素
+    // （1）事件源：button
+    // （2）事件类型：click
+    // （3）事件处理程序：alert()，操作button元素背景颜色
+
+    // 二、选择一种事件注册方式：行内注册
+    // 根据选择器获取HTML元素
+    // document.querySelector('html标签名/.类名/#id名');
+    var btn=document.querySelector('button');
+    btn.onclick=function(){
+        alert('ok');
+        // 操作元素样式:元素.style.样式名='XXX'
+        // this表示当前事件源
+        btn.style.backgroundColor='blue';
+    }
+</script>
+</body>
+</html>
